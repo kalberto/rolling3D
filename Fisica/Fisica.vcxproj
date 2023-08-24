@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FA61A84F-3132-4249-9258-E81B74E590BB}</ProjectGuid>
+    <RootNamespace>Fisica</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)..\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\glut\glut-3.7.6-bin;%(AdditionalLibraryDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\glut\glut-3.7.6-bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;Opengl32.lib;GLU32.lib;glut32.lib;glaux.lib;opengl32.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Bola.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraFps.h" />
+    <ClInclude Include="caçapa.h" />
+    <ClInclude Include="CHEATS.h" />
+    <ClInclude Include="ENUMS.h" />
+    <ClInclude Include="Fisica.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="Gerenciador_Bolas.h" />
+    <ClInclude Include="Gerenciador_Jogador.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Jogador.h" />
+    <ClInclude Include="Materials.h" />
+    <ClInclude Include="MathUtil.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Music.h" />
+    <ClInclude Include="Objetos_Complexos.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="Particle_System.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Poligonos.h" />
+    <ClInclude Include="Primitivo.h" />
+    <ClInclude Include="Quaternions.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Superficie.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="Vetor3D.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bola.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraFps.cpp" />
+    <ClCompile Include="caçapa.cpp" />
+    <ClCompile Include="Fisica.cpp" />
+    <ClCompile Include="floating_point.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Gerenciador_Bolas.cpp" />
+    <ClCompile Include="Gerenciador_Jogador.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="Jogador.cpp" />
+    <ClCompile Include="Main2.cpp" />
+    <ClCompile Include="Materials.cpp" />
+    <ClCompile Include="MathUtil.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Objetos_Complexos.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="Particle_System.cpp" />
+    <ClCompile Include="Quaternions.cpp" />
+    <ClCompile Include="Source1.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Superficie.cpp" />
+    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="Vetor3D.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

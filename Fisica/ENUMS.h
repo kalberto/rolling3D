@@ -1,0 +1,42 @@
+#pragma once
+
+enum MODO
+{
+	ESPECTADOR = 0,
+	ATIVO = 1,
+
+};
+
+
+enum TEXTURA
+{
+	CAIXA = 0,
+	GRASS = 1,
+	STONE_WALL = 2,
+	BRICK_WALL = 3,
+	STONE_CORRIDOR = 4,
+	CRAZYWALL = 5,
+	FLOOR = 6,
+	CEILING = 7,
+	DARK_GRASS = 8,
+	TACO = 9,
+	MARROM = 10,
+	PRETO = 11,
+	BARRA = 12,
+	MEDIDOR = 13,
+	PLAYER1 = 14,
+	PLAYER2 = 15,
+	NUM0 = 16,
+	NUM1 = 17,
+	NUM2 = 18,
+	NUM3 = 19,
+	NUM4 = 20,
+	NUM5 = 21,
+	NUM6 = 22,
+	AURA = 23,
+	PROF1 = 24,
+	PROF2 = 25,
+	PROF3 = 26,
+	PROF4 = 27,
+	AGUA = 28,
+};
